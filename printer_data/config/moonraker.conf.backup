@@ -25,15 +25,6 @@ cors_domains:
 
 [history]
 
-# this enables moonraker announcements for mainsail
-[announcements]
-subscriptions:
-    mainsail
-
-[file_manager]
-# post processing for object cancel. Not recommended for low resource SBCs such as a Pi Zero. Default False
-enable_object_processing: True
-
 [update_manager]
 channel: dev
 refresh_interval: 168
@@ -50,17 +41,3 @@ origin: https://github.com/mainsail-crew/mainsail-config.git
 path: /home/nick/mainsail-config
 primary_branch: master
 type: git_repo
-
-# Crowsnest update_manager entry
-[update_manager crowsnest]
-type: git_repo
-path: ~/crowsnest
-origin: https://github.com/mainsail-crew/crowsnest.git
-managed_services: crowsnest
-install_script: tools/pkglist.sh
-[update_manager klipper-backup]
-type: git_repo
-path: ~/klipper-backup
-origin: https://github.com/Staubgeborener/klipper-backup.git
-managed_services: moonraker
-primary_branch: main
